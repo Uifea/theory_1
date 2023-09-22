@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main wrapper">
+        <button class="btn main__btn">Написать</button>
+        <div class="modal">
+            <form method="post" class="modal__body">
+                <h2 class="modal__title">Стать партнёром проекта</h2>
+                <div class="modal__user-info">
+                    <div class="modal__user-wrapper">
+                        <div class="modal__input-item">
+                            <label><span class="modal__star">✱</span>Название организации</label>
+                            <input type="text" class="modal__input" required>
+                        </div>
+                        <div class="modal__input-item">
+                            <label><span class="modal__star">✱</span>Телефон</label>
+                            <input type="text" class="modal__input " pattern="\+\d \d{3} \d{3}-\d{2}-\d{2}" required >
+                        </div>
+                        <div class="modal__input-item">
+                            <label><span class="modal__star">✱</span>E-mail</label>
+                            <input type="email" class="modal__input " required>
+                        </div>
+                    </div>
+                    <div class="modal__logo">
+                        <p><span class="modal__star">✱</span> Логотип (jpeg, png)</p>
+                        <label for="logo-input">
+                            Выберите файл
+                            <span class="modal__logo-input"></span>
+                        </label>
+                        <input type="file" name="file-logo" id="logo-input" >
+                    </div>
+                </div>
+                <div class="modal__direcion">
+                    <label><span class="modal__star">✱</span>Направление</label>
+                    <select class="modal__input" required>
+                        <option value="" selected>Выберите направление</option>
+                        <option value="Экология">Экология</option>
+                        <option value="IT">IT</option>
+                    </select>
+                </div>
+                <div class="modal__social">
+                    <input type="url" class="modal__input site">
+                    <input type="url" class="modal__input vk">
+                    <input type="text" class="modal__input ok">
+                    <input type="text" class="modal__input fb">
+                    <input type="text" class="modal__input inst">
+                    <input type="text" class="modal__input youtb">
+                    
+                </div>
+                <div class="modal__leader">
+                    <label>Руководитель</label>
+                    <input type="text" class="modal__input">
+                </div>
+                <input type="submit" class="btn modal__btn-sub" value="Стать партнёром проекта">
+                <button class="btn modal__close">Отменить</button>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
