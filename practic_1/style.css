@@ -114,16 +114,26 @@ body {
 
 .modal__logo {
     position: relative;
-    background-image: url("img/Ellipse\ 44.png");
+    /* background-image: url("img/Ellipse\ 44.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
+    display: flex;
+    flex-direction: column;
 }
 
+.modal__logo-image {
+    position: absolute;
+    width: 163px;
+    height: 163px;
+    object-fit: cover;
+    align-self: center;
+    top: 50px;
+    border-radius: 163px;
+}
 
-.modal__logo::before {
+.modal__logo-close {
     position: absolute;
     display: inline-block;
-    content: "";
     top: 65px;
     right: 50px;
     width: 36px;
@@ -131,6 +141,7 @@ body {
     background-image: url("img/icon/Group\ 2394.svg");
     background-repeat: no-repeat;
     cursor: pointer;
+    z-index: 2;
 }
 
 .modal__logo label {
@@ -144,6 +155,7 @@ body {
     text-align: center;
     line-height: 28px;
     cursor: pointer;
+    z-index: 2;
 }
 
 .modal__input-item {
