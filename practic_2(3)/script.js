@@ -38,8 +38,9 @@ fetch(url)
         createArr(data);
         
         //Отслеживание поисковой строки
-        inputSearch.addEventListener('keydown', () => {
+        inputSearch.addEventListener('keyup', () => {
             let textInput = inputSearch.value
+            console.log(inputSearch.value);
             if (textInput.length >= 3) {
                 let resultArr = data.filter((item) => {
                     if(item.body.includes(textInput) || item.title.includes(textInput)) {
